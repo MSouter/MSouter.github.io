@@ -1,0 +1,26 @@
+/* Resume Stylesheet - Michael Souter */
+.res-top {
+  background: Cyan;
+  margin: 2px 50px;
+  padding: 0px 30px;
+  display: flex;
+}
+.res-top h1 {
+  font-size: 3em;
+  flex: 1;
+}
+.res-top ul {
+  float: right;  
+}
+
+.education, .work, .projects, .skills {
+  margin: 5px 20px;
+}
+
+.education h1, .work h1, .projects h1, .skills h1 {
+  font-size: 1em;
+}
+
+.education h2, .work h2, .projects h2, .skills h2 {
+  font-size: .8em;
+}
