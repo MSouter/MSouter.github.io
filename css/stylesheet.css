@@ -1,21 +1,25 @@
 /* Personal Page Stylesheet - Michael Souter */
 .overlord {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   background-image: url("../img/cottage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
 }
 
 .headbar, .footbar {
-  display: flex;
   background-color: rgba(0,0,0,0.8);
   background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  font-family: 'Bungee', cursive;
+  color: White;
+  text-align: center;
+  line-height: 1.0;
 }
 
 .mainview {
@@ -24,15 +28,26 @@
   flex: 1 0 auto;
 }
 
+.main-blank, .main-content {
+  flex: 1;
+  order 0;
+}
+
 .main-content {
   background-color: rgba(255,255,255,0.8);
   background-blend-mode: multiply;
   margin: 40px 80px;
   padding: 30px;
   border-radius: 40px;
-  flex: 1;
-  order: 0;
   color: Black;
+}
+
+.main-content img {
+  max-width: 40%;
+  min-width: 300px;
+  height: auto;
+  float: right;
+  margin: 0px 20px;
 }
 
 .main-content h1 {
@@ -40,13 +55,17 @@
 }
 
 .main-content p {
-  text-indent: 4em;
+  text-indent: 2em;
   font-family: Helvetica, sans-serif;
 }
 
-.main-blank {
-  flex: 1;
-  order 0;
+.main-content a:link, .main-content a:visited {
+  text-decoration: none;
+  color: Blue;
+}
+
+.main-content a:hover, .main-content a:active {
+  color: SlateGrey;
 }
 
 .main-nav {
@@ -79,7 +98,7 @@
   float: right;
 }
 
-a:link, a:visited {
+.main-nav a:link, .main-nav a:visited {
   display: block;
   padding: 0px 16px;
   text-decoration: none;
@@ -88,15 +107,8 @@ a:link, a:visited {
   color: Black;
 }
 
-a:hover, a:active {
+.main-nav a:hover, .main-nav a:active {
   color: SlateGrey;
-}
-
-#top-text, #foot-text {
-  font-family: 'Bungee', cursive;
-  color: White;
-  text-align: center;
-  line-height: 1.0;
 }
 
 @media only screen and (max-width: 500px) {
@@ -105,4 +117,7 @@ a:hover, a:active {
     padding: 2px;
     border-radius: 10px;
   } 
+  .main-content h1 {
+    text-align: center; 
+  }
 }
